@@ -619,6 +619,49 @@ export class AppComponent implements OnInit{
 }
 ```
 
+### Using type definition
+
+If you want to use the type definitions the following code changes needs to be done in app.component.ts file.
+```typescript
+import { DefineIcon,RegisterCommand } from 'froala-editor';
+
+// We will make usage of the Init hook and make the implementation there.
+import { Component, OnInit  } from '@angular/core';
+
+@Component({
+  selector: 'app-demo',
+  template: `<div class="sample">
+               <h2>Sample 11: Add Custom Button</h2>
+               <div [froalaEditor]="options" [(froalaModel)]="content" ></div>
+             </div>`,
+
+
+export class AppComponent implements OnInit{
+
+  ngOnInit () {
+    DefineIcon('alert', {NAME: 'info'});
+    RegisterCommand('alert', {
+      title: 'Hello',
+      focus: false,
+      undo: false,
+      refreshAfterCallback: false,
+
+      callback: () => {
+        alert('Hello!', this);
+      }
+    });
+  }
+
+  public options: Object = {
+    charCounterCount: true,
+    toolbarButtons: ['bold', 'italic', 'underline', 'paragraphFormat','alert'],
+    toolbarButtonsXS: ['bold', 'italic', 'underline', 'paragraphFormat','alert'],
+    toolbarButtonsSM: ['bold', 'italic', 'underline', 'paragraphFormat','alert'],
+    toolbarButtonsMD: ['bold', 'italic', 'underline', 'paragraphFormat','alert'],
+  };
+}
+```
+
 
 ### Special tags
 Note: In order to use special tags in `app.module.ts` add
