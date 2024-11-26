@@ -37,6 +37,12 @@ You will need CSS styles
 <!-- index.html -->
 <link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet">
 ```
+>Note :  In case you want to use font-awesome icons , you can use them by installing it.
+
+- Run ` npm install font-awesome ` 
+- Or in `index.hml` add given cdn  
+ `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">`
+
 
 >Note :  In case you want to use font-awesome icons , you can use them by installing it.
 - Run ` npm install font-awesome ` 
@@ -398,6 +404,7 @@ npm run start
 #### Create Angular app
 
 1. ng new froala-aot
+- Go to `angular.json` and change `architect.build.options.outputPath` to `src/dist` and add following code to `architect.build.options.assets array`
 
 ```javascript
 {
