@@ -551,7 +551,7 @@ public options: Object = {
 }
 ```
 
-Aditional option is used:
+Additional option is used:
 * **immediateAngularModelUpdate**: (default: false) This option synchronizes the angular model as soon as a key is released in the editor. Note that it may affect performances.
 
 
@@ -622,7 +622,7 @@ If you want to use two-way binding to display the form model in other places you
 </form>
 ```
 
-If you want to wrap froalaEditor directive into a component that supports reactive forms please see [froala.component.ts](https://github.com/froala/angular-froala-wysiwyg/blob/master/demo/src/app/froala.component.ts) from demo.
+If you want to wrap froalaEditor directive into a component that supports reactive forms please see [froala.component.ts](https://github.com/froala/angular-froala-wysiwyg/blob/master/projects/demo/src/app/froala.component.ts) from demo.
 
 ### Extend functionality
 
